@@ -67,7 +67,7 @@ public class JacobUtils {
     }
 
     public static void main(String[] args){
-        wordToHtml("","");
+        wordToHtml("E://1.doc","E://tt/1.html");
     }
 }
 
