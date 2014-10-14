@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<APP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+	<!-- 系统配置（必填） -->
+	<system>
+		<!-- Session 管理器（可选） -->
+		<!-- 可以配置多个，不同的 Session 管理器可使用不同的方式连接不同的数据库 -->
+		<database-session-managers>
+			<!-- name - 名称（必填），class - 管理器实现类（必填） -->
+			<manager name="session-mgr-1" class="org.nsg.dao.jdbc.DruidSessionMgr" />
+		</database-session-managers>
+		<!-- 应用程序生命周期监听器（可选）：接收应用程序启动和关闭通知 -->
+		<!--<app-life-cycle-listener class="global.MyLifeCycleListener" />-->
+		
+		<!-- 用户配置信息解析器（可选）：解析 '<user></user>' 中的配置信息 -->
+		<user-config-parser class="global.MyConfigParser" />
+	</system>
+	
+	<!-- 用户配置（可选） -->
+	<user>
+		<!-- <my-home>nsg</my-home> -->
+	</user>
+</APP>

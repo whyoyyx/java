@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc>
+	<property name="driver">com.mysql.jdbc.Driver</property>
+	<property name="url">
+		jdbc:mysql://localhost:3307/itp?autoReconnect=true&amp;failOverReadOnly=false&amp;useUnicode=true&amp;characterEncoding=UTF-8
+	</property>
+	<property name="user">root</property>
+	<property name="password">123456</property>
+</jdbc>

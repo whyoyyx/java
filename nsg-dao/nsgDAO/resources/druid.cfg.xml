@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<druid>
+	<!-- 基础配置 驱动、URL、用户名、密码  -->
+	<property name="driverClassName">com.mysql.jdbc.Driver</property>
+	<property name="url">
+		jdbc:mysql://localhost:3307/itp?autoReconnect=true&amp;failOverReadOnly=false&amp;useUnicode=true&amp;characterEncoding=UTF-8
+	</property>
+	<property name="username">root</property>
+	<property name="password">123456</property>
+	
+	<!-- 配置初始大小、最大、最小 -->
+	<property name="initialSize">1</property>
+	<property name="maxActive">20</property>
+	<property name="minIdle">10</property>
+	<property name="maxIdle">15</property>
+	
+	<!-- 配置获取连接等待超时的时间 -->
+	<property name="maxWait">60000</property>
+	
+	<!-- 检测配置 -->
+	<property name="testWhileIdle">true</property>
+	<property name="testOnBorrow">true</property>
+	<property name="testOnReturn">false</property>
+	
+	<!-- 线程间隔时间等 -->
+	<property name="timeBetweenEvictionRunsMillis">60000</property>
+	<property name="minEvictableIdleTimeMillis">300000</property>
+	
+	<!-- 检测连接是否有效的SQL -->
+	<property name="validationQuery">SELECT 'x'</property>
+	<property name="validationQueryTimeout">300000</property>
+	
+	<!-- 长时间过长的连接强制关闭 -->
+	<property name="removeAbandoned">true</property>
+	<property name="removeAbandonedTimeout">1800</property>
+	
+	<!-- 记录到日志  -->
+	<property name="logAbandoned">true</property>
+	
+	<!-- 缓存配置 -->
+	<property name="poolPreparedStatements">true</property>
+	<property name="maxOpenPreparedStatements">20</property>
+	
+	<property name="init">true</property>
+</druid>
